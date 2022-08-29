@@ -1,0 +1,25 @@
+service SimpleSum {
+  rpc streamSimpleSum (SimpleSumRequest) returns (SimpleSumResponse) {}
+}
+
+message SimpleSumRequest {
+  required int32 n1 = 1;
+  required int32 n2 = 2;
+}
+
+message SimpleSumResponse {
+  required int32 sum = 1;
+}
+
+service RepeatedSum {
+  rpc streamRepeatedSum (RepeatedSumRequest) returns (RepeatedSumResponse) {}
+}
+
+message RepeatedSumRequest {
+  required int32 n = 1;
+  required int32 t = 2;
+}
+
+message RepeatedSumResponse {
+  required int32 sum = 1;
+}
