@@ -11,6 +11,7 @@ public class Service {
             Server server = ServerBuilder.forPort(8080)
                     .addService(new SimpleSumServer())
                     .addService(new RepeatedSumServer())
+                    .addService(new StreamSumServer())
                     .build();
 
             server.start();

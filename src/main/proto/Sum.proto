@@ -23,3 +23,16 @@ message RepeatedSumRequest {
 message RepeatedSumResponse {
   required int32 sum = 1;
 }
+
+service StreamSum {
+  rpc streamStreamSum (StreamSumRequest) returns (StreamSumResponse) {}
+}
+
+message StreamSumRequest {
+  required int32 n1 = 1;
+  required int32 n2 = 2;
+}
+
+message StreamSumResponse {
+  required int32 sum = 1;
+}

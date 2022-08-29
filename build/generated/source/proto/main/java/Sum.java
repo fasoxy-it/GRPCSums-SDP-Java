@@ -2320,6 +2320,1160 @@ public final class Sum {
 
   }
 
+  public interface StreamSumRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StreamSumRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 n1 = 1;</code>
+     * @return Whether the n1 field is set.
+     */
+    boolean hasN1();
+    /**
+     * <code>required int32 n1 = 1;</code>
+     * @return The n1.
+     */
+    int getN1();
+
+    /**
+     * <code>required int32 n2 = 2;</code>
+     * @return Whether the n2 field is set.
+     */
+    boolean hasN2();
+    /**
+     * <code>required int32 n2 = 2;</code>
+     * @return The n2.
+     */
+    int getN2();
+  }
+  /**
+   * Protobuf type {@code StreamSumRequest}
+   */
+  public  static final class StreamSumRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StreamSumRequest)
+      StreamSumRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamSumRequest.newBuilder() to construct.
+    private StreamSumRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamSumRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamSumRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamSumRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              n1_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              n2_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Sum.internal_static_StreamSumRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Sum.internal_static_StreamSumRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Sum.StreamSumRequest.class, Sum.StreamSumRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int N1_FIELD_NUMBER = 1;
+    private int n1_;
+    /**
+     * <code>required int32 n1 = 1;</code>
+     * @return Whether the n1 field is set.
+     */
+    public boolean hasN1() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required int32 n1 = 1;</code>
+     * @return The n1.
+     */
+    public int getN1() {
+      return n1_;
+    }
+
+    public static final int N2_FIELD_NUMBER = 2;
+    private int n2_;
+    /**
+     * <code>required int32 n2 = 2;</code>
+     * @return Whether the n2 field is set.
+     */
+    public boolean hasN2() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required int32 n2 = 2;</code>
+     * @return The n2.
+     */
+    public int getN2() {
+      return n2_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasN1()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasN2()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, n1_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeInt32(2, n2_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, n1_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, n2_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Sum.StreamSumRequest)) {
+        return super.equals(obj);
+      }
+      Sum.StreamSumRequest other = (Sum.StreamSumRequest) obj;
+
+      if (hasN1() != other.hasN1()) return false;
+      if (hasN1()) {
+        if (getN1()
+            != other.getN1()) return false;
+      }
+      if (hasN2() != other.hasN2()) return false;
+      if (hasN2()) {
+        if (getN2()
+            != other.getN2()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasN1()) {
+        hash = (37 * hash) + N1_FIELD_NUMBER;
+        hash = (53 * hash) + getN1();
+      }
+      if (hasN2()) {
+        hash = (37 * hash) + N2_FIELD_NUMBER;
+        hash = (53 * hash) + getN2();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Sum.StreamSumRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Sum.StreamSumRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Sum.StreamSumRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StreamSumRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StreamSumRequest)
+        Sum.StreamSumRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Sum.internal_static_StreamSumRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Sum.internal_static_StreamSumRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Sum.StreamSumRequest.class, Sum.StreamSumRequest.Builder.class);
+      }
+
+      // Construct using Sum.StreamSumRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        n1_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        n2_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Sum.internal_static_StreamSumRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumRequest getDefaultInstanceForType() {
+        return Sum.StreamSumRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumRequest build() {
+        Sum.StreamSumRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumRequest buildPartial() {
+        Sum.StreamSumRequest result = new Sum.StreamSumRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.n1_ = n1_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.n2_ = n2_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Sum.StreamSumRequest) {
+          return mergeFrom((Sum.StreamSumRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Sum.StreamSumRequest other) {
+        if (other == Sum.StreamSumRequest.getDefaultInstance()) return this;
+        if (other.hasN1()) {
+          setN1(other.getN1());
+        }
+        if (other.hasN2()) {
+          setN2(other.getN2());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasN1()) {
+          return false;
+        }
+        if (!hasN2()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Sum.StreamSumRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Sum.StreamSumRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int n1_ ;
+      /**
+       * <code>required int32 n1 = 1;</code>
+       * @return Whether the n1 field is set.
+       */
+      public boolean hasN1() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required int32 n1 = 1;</code>
+       * @return The n1.
+       */
+      public int getN1() {
+        return n1_;
+      }
+      /**
+       * <code>required int32 n1 = 1;</code>
+       * @param value The n1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setN1(int value) {
+        bitField0_ |= 0x00000001;
+        n1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n1 = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearN1() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        n1_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int n2_ ;
+      /**
+       * <code>required int32 n2 = 2;</code>
+       * @return Whether the n2 field is set.
+       */
+      public boolean hasN2() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required int32 n2 = 2;</code>
+       * @return The n2.
+       */
+      public int getN2() {
+        return n2_;
+      }
+      /**
+       * <code>required int32 n2 = 2;</code>
+       * @param value The n2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setN2(int value) {
+        bitField0_ |= 0x00000002;
+        n2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 n2 = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearN2() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        n2_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StreamSumRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:StreamSumRequest)
+    private static final Sum.StreamSumRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Sum.StreamSumRequest();
+    }
+
+    public static Sum.StreamSumRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StreamSumRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StreamSumRequest>() {
+      @java.lang.Override
+      public StreamSumRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamSumRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamSumRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamSumRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Sum.StreamSumRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StreamSumResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StreamSumResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 sum = 1;</code>
+     * @return Whether the sum field is set.
+     */
+    boolean hasSum();
+    /**
+     * <code>required int32 sum = 1;</code>
+     * @return The sum.
+     */
+    int getSum();
+  }
+  /**
+   * Protobuf type {@code StreamSumResponse}
+   */
+  public  static final class StreamSumResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StreamSumResponse)
+      StreamSumResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamSumResponse.newBuilder() to construct.
+    private StreamSumResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamSumResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamSumResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamSumResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              sum_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Sum.internal_static_StreamSumResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Sum.internal_static_StreamSumResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Sum.StreamSumResponse.class, Sum.StreamSumResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SUM_FIELD_NUMBER = 1;
+    private int sum_;
+    /**
+     * <code>required int32 sum = 1;</code>
+     * @return Whether the sum field is set.
+     */
+    public boolean hasSum() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required int32 sum = 1;</code>
+     * @return The sum.
+     */
+    public int getSum() {
+      return sum_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasSum()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, sum_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, sum_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof Sum.StreamSumResponse)) {
+        return super.equals(obj);
+      }
+      Sum.StreamSumResponse other = (Sum.StreamSumResponse) obj;
+
+      if (hasSum() != other.hasSum()) return false;
+      if (hasSum()) {
+        if (getSum()
+            != other.getSum()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSum()) {
+        hash = (37 * hash) + SUM_FIELD_NUMBER;
+        hash = (53 * hash) + getSum();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static Sum.StreamSumResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Sum.StreamSumResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Sum.StreamSumResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static Sum.StreamSumResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(Sum.StreamSumResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StreamSumResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StreamSumResponse)
+        Sum.StreamSumResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Sum.internal_static_StreamSumResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Sum.internal_static_StreamSumResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Sum.StreamSumResponse.class, Sum.StreamSumResponse.Builder.class);
+      }
+
+      // Construct using Sum.StreamSumResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Sum.internal_static_StreamSumResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumResponse getDefaultInstanceForType() {
+        return Sum.StreamSumResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumResponse build() {
+        Sum.StreamSumResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public Sum.StreamSumResponse buildPartial() {
+        Sum.StreamSumResponse result = new Sum.StreamSumResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sum_ = sum_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Sum.StreamSumResponse) {
+          return mergeFrom((Sum.StreamSumResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Sum.StreamSumResponse other) {
+        if (other == Sum.StreamSumResponse.getDefaultInstance()) return this;
+        if (other.hasSum()) {
+          setSum(other.getSum());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasSum()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Sum.StreamSumResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Sum.StreamSumResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int sum_ ;
+      /**
+       * <code>required int32 sum = 1;</code>
+       * @return Whether the sum field is set.
+       */
+      public boolean hasSum() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required int32 sum = 1;</code>
+       * @return The sum.
+       */
+      public int getSum() {
+        return sum_;
+      }
+      /**
+       * <code>required int32 sum = 1;</code>
+       * @param value The sum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSum(int value) {
+        bitField0_ |= 0x00000001;
+        sum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 sum = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSum() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sum_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StreamSumResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:StreamSumResponse)
+    private static final Sum.StreamSumResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Sum.StreamSumResponse();
+    }
+
+    public static Sum.StreamSumResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StreamSumResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StreamSumResponse>() {
+      @java.lang.Override
+      public StreamSumResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamSumResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamSumResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamSumResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public Sum.StreamSumResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SimpleSumRequest_descriptor;
   private static final 
@@ -2340,6 +3494,16 @@ public final class Sum {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RepeatedSumResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StreamSumRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StreamSumRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StreamSumResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StreamSumResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2353,11 +3517,14 @@ public final class Sum {
       "\002(\005\022\n\n\002n2\030\002 \002(\005\" \n\021SimpleSumResponse\022\013\n\003" +
       "sum\030\001 \002(\005\"*\n\022RepeatedSumRequest\022\t\n\001n\030\001 \002" +
       "(\005\022\t\n\001t\030\002 \002(\005\"\"\n\023RepeatedSumResponse\022\013\n\003" +
-      "sum\030\001 \002(\0052G\n\tSimpleSum\022:\n\017streamSimpleSu" +
-      "m\022\021.SimpleSumRequest\032\022.SimpleSumResponse" +
-      "\"\0002O\n\013RepeatedSum\022@\n\021streamRepeatedSum\022\023" +
-      ".RepeatedSumRequest\032\024.RepeatedSumRespons" +
-      "e\"\000"
+      "sum\030\001 \002(\005\"*\n\020StreamSumRequest\022\n\n\002n1\030\001 \002(" +
+      "\005\022\n\n\002n2\030\002 \002(\005\" \n\021StreamSumResponse\022\013\n\003su" +
+      "m\030\001 \002(\0052G\n\tSimpleSum\022:\n\017streamSimpleSum\022" +
+      "\021.SimpleSumRequest\032\022.SimpleSumResponse\"\000" +
+      "2O\n\013RepeatedSum\022@\n\021streamRepeatedSum\022\023.R" +
+      "epeatedSumRequest\032\024.RepeatedSumResponse\"" +
+      "\0002G\n\tStreamSum\022:\n\017streamStreamSum\022\021.Stre" +
+      "amSumRequest\032\022.StreamSumResponse\"\000"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2386,6 +3553,18 @@ public final class Sum {
     internal_static_RepeatedSumResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RepeatedSumResponse_descriptor,
+        new java.lang.String[] { "Sum", });
+    internal_static_StreamSumRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_StreamSumRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StreamSumRequest_descriptor,
+        new java.lang.String[] { "N1", "N2", });
+    internal_static_StreamSumResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_StreamSumResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StreamSumResponse_descriptor,
         new java.lang.String[] { "Sum", });
   }
 
